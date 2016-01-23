@@ -23,6 +23,8 @@ public class Connection {
         this.ipAddress = ipAddress;
     }
 
+    public int getID() { return ID; }
+
     public Connection(int ID) {
         this.ID = ID;
         this.portNumber = 0;

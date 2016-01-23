@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
  */
 public class ConnectionTest {
 
-    Connection testConnection = new Connection(45, "12.12.35.35");
+    Connection testConnection = new Connection(2, 45, "12.12.35.35");
 
     @Test
     public void getPortNumberTest() {
