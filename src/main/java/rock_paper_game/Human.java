@@ -8,19 +8,19 @@ import java.util.Scanner;
 public class Human {
 
     // Should really be private, but needs to be public for testing??
-    public Choices parseInput(String input) {
+    public static Choice parseInput(String input) {
 
-        Choices choice = null;
+        Choice choice = null;
 
             switch (input) {
                 case "r":
-                    choice = Choices.ROCK;
+                    choice = Choice.ROCK;
                     break;
                 case "p":
-                    choice = Choices.PAPER;
+                    choice = Choice.PAPER;
                     break;
                 case "s":
-                    choice = Choices.SCISSORS;
+                    choice = Choice.SCISSORS;
                     break;
                 default: choice = null;
                     break;
@@ -30,14 +30,15 @@ public class Human {
 
     }
 
-    public Choices getInput() {
+    // Called from RockPaperScissors to get human input and return as a Choice
+    public static Choice getInput() {
 
-        Choices finalChoice = null;
+        Choice finalChoice = null;
         Scanner sc = new Scanner(System.in);
 
         while(true) {
             System.out.println("Please make your choice ('r', 'p', or 's'): ");
-            Choices input = parseInput(sc.nextLine());
+            Choice input = parseInput(sc.nextLine());
             if(input != null) {
                 finalChoice = input;
                 break;

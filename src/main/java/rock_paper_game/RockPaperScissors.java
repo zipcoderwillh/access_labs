@@ -5,6 +5,7 @@ package rock_paper_game;
  */
 public class RockPaperScissors {
 
+    // Main game controller. Keeps track of score totals and current round, calls playRound() for each round.
     private String playGame() {
 
         String result = "";
@@ -27,28 +28,29 @@ public class RockPaperScissors {
             }
         }
 
-        result = humanWins > computerWins ? "You won this game human, but watch your back next time." : "HAHAHA, computer wins the game. Prepare to render tribute to your new robot overlords.";
+        result = humanWins > computerWins ? "You won this game human, but watch your back next time." : "HAHAHA, computer wins the game. Prepare to render tribute to your new robot overlords, human scum.";
 
         return result;
 
     }
 
+    // Called for each individual round. Gets choices from human and computer and evaluates the winner.
     private String playRound() {
 
         String result = "";
-        Choices computerChoice = new Computer().getTurn();
-        Choices humanChoice = new Human().getInput();
+        Choice computerChoice = Computer.getTurn();
+        Choice humanChoice = Human.getInput();
 
         if(computerChoice.equals(humanChoice)) {
             result = "tie";
             System.out.println("Computer choice was " + computerChoice + ". " + "This round was a tie and will be repeated");
         } else {
-            if (computerChoice.equals(Choices.ROCK)) {
-                result = humanChoice.equals(Choices.PAPER) ? "Human" : "Computer";
-            } else if (computerChoice.equals(Choices.PAPER)) {
-                result = humanChoice.equals(Choices.SCISSORS) ? "Human" : "Computer";
-            } else if (computerChoice.equals(Choices.SCISSORS)) {
-                result = humanChoice.equals(Choices.ROCK) ? "Human" : "Computer";
+            if (computerChoice.equals(Choice.ROCK)) {
+                result = humanChoice.equals(Choice.PAPER) ? "Human" : "Computer";
+            } else if (computerChoice.equals(Choice.PAPER)) {
+                result = humanChoice.equals(Choice.SCISSORS) ? "Human" : "Computer";
+            } else if (computerChoice.equals(Choice.SCISSORS)) {
+                result = humanChoice.equals(Choice.ROCK) ? "Human" : "Computer";
             }
             System.out.println("Computer choice was " + computerChoice + ". " + result + " wins this round\n");
         }

@@ -13,9 +13,9 @@ public class TestHuman {
     public void testGetChoice() {
 
         Human testHuman = new Human();
-        assertTrue(testHuman.parseInput("r").equals(Choices.ROCK));
-        assertTrue(testHuman.parseInput("p").equals(Choices.PAPER));
-        assertTrue(testHuman.parseInput("s").equals(Choices.SCISSORS));
+        assertTrue(testHuman.parseInput("r").equals(Choice.ROCK));
+        assertTrue(testHuman.parseInput("p").equals(Choice.PAPER));
+        assertTrue(testHuman.parseInput("s").equals(Choice.SCISSORS));
         assertTrue(testHuman.parseInput("n") == null);
 
     }

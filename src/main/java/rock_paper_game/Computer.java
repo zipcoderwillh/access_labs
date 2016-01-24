@@ -5,19 +5,19 @@ package rock_paper_game;
  */
 public class Computer {
 
-    public Choices getTurn() {
+    public static Choice getTurn() {
 
-        Choices choice;
+        Choice choice;
         int guess = (int)Math.ceil(Math.random() * 3);
 
         switch(guess) {
-            case 1: choice = Choices.ROCK;
+            case 1: choice = Choice.ROCK;
                 break;
-            case 2: choice = Choices.PAPER;
+            case 2: choice = Choice.PAPER;
                 break;
-            case 3: choice = Choices.SCISSORS;
+            case 3: choice = Choice.SCISSORS;
                 break;
-            default: choice = Choices.ERROR;
+            default: choice = Choice.ERROR;
                 break;
         }
 
