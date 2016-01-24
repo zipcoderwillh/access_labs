@@ -1,3 +1,7 @@
+package test_connection_manager;
+
+import connection_manager.Connection;
+import connection_manager.ConnectionManager;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -32,7 +36,7 @@ public class ConnectionManagerTest {
     @Test
     public void displayConnectionTest() {
         Connection testConnection6 = ConnectionManager.openConnection();
-        assertEquals("Connection ID: 6\nConnection port: 0\nConnection IP address: 0.0.0.0\n", ConnectionManager.displayConnection(6));
+        assertEquals("connection_manager.Connection ID: 6\nconnection_manager.Connection port: 0\nconnection_manager.Connection IP address: 0.0.0.0\n", ConnectionManager.displayConnection(6));
     }
 
 }

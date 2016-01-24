@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+package connection_manager;
 
 /**
  * Created by willhorton on 1/22/16.
@@ -66,7 +66,7 @@ public class ConnectionManager {
 
         if(selectedConnection == null) return "Sorry, connection " + ID + " was not found\n";
 
-        return "Connection ID: " + selectedConnection.getID() + "\nConnection port: " + selectedConnection.getPortNumber() + "\nConnection IP address: " + selectedConnection.getIpAddress() + "\n";
+        return "connection_manager.Connection ID: " + selectedConnection.getID() + "\nconnection_manager.Connection port: " + selectedConnection.getPortNumber() + "\nconnection_manager.Connection IP address: " + selectedConnection.getIpAddress() + "\n";
 
     }
 

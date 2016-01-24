@@ -1,4 +1,6 @@
-import org.junit.Before;
+package test_connection_manager;
+
+import connection_manager.Connection;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
