@@ -12,11 +12,10 @@ public class TestHuman {
     @Test
     public void testGetChoice() {
 
-        Human testHuman = new Human();
-        assertTrue(testHuman.parseInput("r").equals(Choice.ROCK));
-        assertTrue(testHuman.parseInput("p").equals(Choice.PAPER));
-        assertTrue(testHuman.parseInput("s").equals(Choice.SCISSORS));
-        assertTrue(testHuman.parseInput("n") == null);
+        assertTrue(Human.parseInput("r").equals(Choice.ROCK));
+        assertTrue(Human.parseInput("p").equals(Choice.PAPER));
+        assertTrue(Human.parseInput("s").equals(Choice.SCISSORS));
+        assertTrue(Human.parseInput("n") == null);
 
     }
 

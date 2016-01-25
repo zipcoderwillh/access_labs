@@ -12,8 +12,9 @@ public class TestComputer {
     @Test
     public void testGetTurn() {
 
-        Computer testComputer = new Computer();
-        assertFalse(testComputer.getTurn().equals(Choice.ERROR));
+        for(int i = 0; i < 1000000; i++){
+            assertFalse(Computer.getTurn().equals(Choice.ERROR));
+        }
 
     }
 

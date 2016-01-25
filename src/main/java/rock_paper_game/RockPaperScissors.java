@@ -45,12 +45,13 @@ public class RockPaperScissors {
             result = "tie";
             System.out.println("Computer choice was " + computerChoice + ". " + "This round was a tie and will be repeated");
         } else {
-            if (computerChoice.equals(Choice.ROCK)) {
-                result = humanChoice.equals(Choice.PAPER) ? "Human" : "Computer";
-            } else if (computerChoice.equals(Choice.PAPER)) {
-                result = humanChoice.equals(Choice.SCISSORS) ? "Human" : "Computer";
-            } else if (computerChoice.equals(Choice.SCISSORS)) {
-                result = humanChoice.equals(Choice.ROCK) ? "Human" : "Computer";
+            switch(computerChoice) {
+                case ROCK: result = humanChoice.equals(Choice.PAPER) ? "Human" : "Computer";
+                    break;
+                case PAPER: result = humanChoice.equals(Choice.SCISSORS) ? "Human" : "Computer";
+                    break;
+                case SCISSORS: result = humanChoice.equals(Choice.ROCK) ? "Human" : "Computer";
+                    break;
             }
             System.out.println("Computer choice was " + computerChoice + ". " + result + " wins this round\n");
         }
