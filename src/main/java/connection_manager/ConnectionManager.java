@@ -72,6 +72,7 @@ public class ConnectionManager {
 
     public static void main(String[] args) {
 
+        // Demonstration
         Connection connection1 = ConnectionManager.openConnection();
         Connection connection2 = ConnectionManager.openConnection();
         Connection connection3 = ConnectionManager.openConnection();

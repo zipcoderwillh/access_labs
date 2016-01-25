@@ -12,6 +12,7 @@ public class TestHuman {
     @Test
     public void testGetChoice() {
 
+        // Test that input returns correct enum value
         assertTrue(Human.parseInput("r").equals(Choice.ROCK));
         assertTrue(Human.parseInput("p").equals(Choice.PAPER));
         assertTrue(Human.parseInput("s").equals(Choice.SCISSORS));

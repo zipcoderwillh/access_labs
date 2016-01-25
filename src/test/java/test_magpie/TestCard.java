@@ -14,6 +14,7 @@ public class TestCard {
     @Test
     public void testGetPoints() {
 
+        // Test that correct number of total points is returned for various individual cards
         Card testCard = new Card(Value.KING, Suit.DIAMONDS);
         int points = testCard.getPoints();
         assertTrue(testCard.getPoints() == 22);

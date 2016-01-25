@@ -15,6 +15,7 @@ public class TestPlayer {
     @Test
     public void testDrawNewCard() {
 
+        // Instantiate test objects
         Player testPlayer = new Player();
         Card testCard = new Card(Value.KING, Suit.CLUBS);
 

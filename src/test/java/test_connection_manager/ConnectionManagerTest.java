@@ -28,6 +28,7 @@ public class ConnectionManagerTest {
 
     @Test
     public void closeConnectionTest() {
+        // Test that closed connection is actually removed from array
         ConnectionManager.closeConnection(4);
         assertEquals("Sorry, connection 4 was not found\n", ConnectionManager.displayConnection(4));
     }
@@ -35,6 +36,7 @@ public class ConnectionManagerTest {
 
     @Test
     public void displayConnectionTest() {
+        // Test that display method displays accurate information
         Connection testConnection6 = ConnectionManager.openConnection();
         assertEquals("connection_manager.Connection ID: 6\nconnection_manager.Connection port: 0\nconnection_manager.Connection IP address: 0.0.0.0\n", ConnectionManager.displayConnection(6));
     }

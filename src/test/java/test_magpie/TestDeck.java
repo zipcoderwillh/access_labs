@@ -12,8 +12,7 @@ public class TestDeck {
 
     @Test
     public void testGetRandomCard() {
-        // Test that returned card is a card, and that each card is removed from the deck since more than 52 calls
-        // to getRandomCard() will return null.
+        // Test that function returns a valid card.
         Deck testDeck = new Deck();
         assertTrue(testDeck.getRandomCard() instanceof Card);
     }

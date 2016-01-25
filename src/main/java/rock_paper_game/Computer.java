@@ -7,7 +7,7 @@ public class Computer {
 
     public static Choice getTurn() {
 
-        Choice choice;
+        Choice choice = null;
         int guess = (int)Math.ceil(Math.random() * 3);
 
         switch(guess) {
@@ -16,8 +16,6 @@ public class Computer {
             case 2: choice = Choice.PAPER;
                 break;
             case 3: choice = Choice.SCISSORS;
-                break;
-            default: choice = Choice.ERROR;
                 break;
         }
 
