@@ -14,7 +14,7 @@ public class Player {
         return allCards;
     }
 
-    public void drawNewCard(Card newCard) {
+    public void addNewCard(Card newCard) {
         allCards.add(newCard);
     }
 

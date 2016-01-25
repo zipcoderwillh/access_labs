@@ -22,7 +22,7 @@ public class TestPlayer {
         assertTrue(testPlayer.getAllCards().isEmpty());
 
         // Test that a card is added to player's hand and that card is the same one that was passed as an argument
-        testPlayer.drawNewCard(testCard);
+        testPlayer.addNewCard(testCard);
         assertTrue(testPlayer.getAllCards().size() == 1);
         assertTrue(testPlayer.getAllCards().get(0) == testCard);
 

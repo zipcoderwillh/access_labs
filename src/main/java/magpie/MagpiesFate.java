@@ -47,7 +47,7 @@ public class MagpiesFate {
 
             while(!hasAce) {
                 Card randomCard = deck.getRandomCard();
-                currentPlayer.drawNewCard(randomCard);
+                currentPlayer.addNewCard(randomCard);
                 if(randomCard.getValue().equals(Value.ACE)) {
                     hasAce = true;
                 }
